@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col">
+    <form id="form1" method="POST">
+        {% csrf_token %}
+        <h2>{{ poll }}</h2>
+        <div class="list-of-polls">
+            <input id="o1" name="poll" type="radio" value="option1">
+            <label class="poll-answer" for="o1">{{ poll.option1 }}</label>
+            <br>
+            <input id="o2" name="poll" type="radio" value="option2">
+            <label class="poll-answer" for="o2">{{ poll.option2 }}</label>
+            <br>
+            <input id="o3" name="poll" type="radio" value="option3">
+            <label class="poll-answer" for="o3">{{ poll.option3 }}</label>
+            <br>
+            <input id="o4" name="poll" type="radio" value="option4">
+            <label class="poll-answer" for="o4">{{ poll.option4 }}</label>
+        </div>
+        <br>
+        <button class="btn btn-info" type="submit" value="Submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

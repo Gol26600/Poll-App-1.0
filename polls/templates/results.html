@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ poll }} - Results:</h2>
+<div class="item-row">
+    <ul>
+        <br>
+        <li>{{ poll.option1 }} -- <strong>{{ poll.option1_count }}</strong></li>
+        <li>{{ poll.option2 }} -- <strong>{{ poll.option2_count }}</strong></li>
+        <li>{{ poll.option3 }} -- <strong>{{ poll.option3_count }}</strong></li>
+        <li>{{ poll.option4 }} -- <strong>{{ poll.option4_count }}</strong></li>
+    </ul>
+</div>
+
+{% endblock %}

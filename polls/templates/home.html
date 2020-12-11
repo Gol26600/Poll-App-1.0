@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">
+    <h1><u>POLLS</u></h1>
+    <br>
+    <div class="list-of-polls">
+        {% for poll in polls %}
+        <a class="disabled" href="{% url 'poll' poll.id %}">
+            <div class="item-row">
+                {{ poll.question }}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
